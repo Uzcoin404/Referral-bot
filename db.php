@@ -1,6 +1,10 @@
 <?php
-$connect = mysqli_connect('sql205.epizy.com', 'epiz_30578297', '7OrYVkr3mkf', 'epiz_30578297_referal');
-if ($connect) {
+$conn = mysqli_connect('mysql-72898-0.cloudclusters.net', 'admin', 'gmBTydEM', 'referal_bot', 19546);
+if ($conn) {
     echo 'connect';
 }
+
+$query = mysqli_query($conn, "SELECT * FROM `users`");
+$sql = mysqli_fetch_all($query);
+var_dump($sql);
 ?>

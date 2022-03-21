@@ -7,7 +7,7 @@ include_once('user.php');
 $telegram = new Telegram("5046375589:AAGr3BvYHe2NiIPMYyzOpJalcdP2UyvC81Y", true);
 $Admin = "829349149";
 
-$message = $telegram->getData()['message'];
+$message = isset($telegram->getData()['message']) ? $telegram->getData()['message'] : '';
 $chat_id = $telegram ->ChatID();
 $text = $telegram ->Text();
 $first_name = $telegram -> FirstName();

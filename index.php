@@ -3,7 +3,7 @@ date_default_timezone_set('Asia/Tashkent');
 require_once('library/Telegram.php');
 include_once('user.php');
 
-$telegram = new Telegram("5117795199:AAGg4FIN3IQ4v55uNNdK_88JQJroWNkACHQ", true);
+$telegram = new Telegram("5046375589:AAGr3BvYHe2NiIPMYyzOpJalcdP2UyvC81Y", true);
 $Admin = "829349149";
 
 $message = $telegram->getData()['message'];

@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set('Asia/Tashkent');
 require_once('library/Telegram.php');
 include_once('user.php');
@@ -19,12 +20,14 @@ switch ($text) {
         $telegram->sendMessage(['chat_id' => $chat_id, 'text' => 'Salom']);
         break;
     case '/test':
-        $userData->setData('data', json_encode($telegram->getData()));
+        $_SESSION['data'] = json_encode($telegram->getData(), JSON_PRETTY_PRINT);
+        $userData->setData('data', json_encode($telegram->getData(), JSON_PRETTY_PRINT));
         $telegram->sendMessage(['chat_id' => $chat_id, 'text' => 'Saqlandi']);
         break;
     case '/show':
         $data = $userData->getData('data');
         $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $data]);
+        $telegram->sendMessage(['chat_id' => $chat_id, 'text' => $_SESSION['data']]);
     break;
 }
 

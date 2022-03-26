@@ -23,12 +23,13 @@ $lastName = $telegram -> LastName();
 $fullName = $firstName . ' ' . $lastName;
 $username = $telegram -> Username();
 
+if (str_contains($text, '/start')) {
+    setReferral();
+}
 if (channelMemberCheck()) {
     if ($text == '/start') {
         setUser();
         showMain();
-    } else if (str_contains($text, '/start')) {
-        setReferral();
     } else {
         switch ($text) {
             case "📱 Kabinet":

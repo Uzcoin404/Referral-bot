@@ -2,9 +2,8 @@
 date_default_timezone_set('Asia/Tashkent');
 require_once('library/Telegram.php');
 require_once('db.php');
-include_once('user.php');
 
-$telegram = new Telegram("5046375589:AAGr3BvYHe2NiIPMYyzOpJalcdP2UyvC81Y", true);
+$telegram = new Telegram("5155148857:AAE3-h7ra108IWt8ouEcjCnhpnrQNH6YlyI", true);
 $db = new Database();
 $Admin = "829349149";
 $Channel = "@UzcoinOfficial";
@@ -23,7 +22,6 @@ $firstName = $telegram -> FirstName();
 $lastName = $telegram -> LastName();
 $fullName = $firstName . ' ' . $lastName;
 $username = $telegram -> Username();
-$userData = new UserData($chatID);
 
 if (channelMemberCheck()) {
     if ($text == '/start') {
@@ -109,7 +107,7 @@ function setReferral(){
 }
 
 function showMain(){
-    global $telegram, $chatID, $userData;
+    global $telegram, $chatID;
 
     $mainButtons = $telegram->buildKeyBoard([
         [$telegram->buildKeyboardButton("📱 Kabinet")],
@@ -119,7 +117,6 @@ function showMain(){
 
     $text = "*🚀 Botga xush kelibsiz*";
     sendMessage($text, true, $mainButtons);
-    $userData->setData('page', 'main');
 }
 
 function showCabinet(){

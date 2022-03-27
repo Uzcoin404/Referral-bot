@@ -102,9 +102,9 @@ function setReferral(){
         } else {
             sendMessage("_Sizni *Nomala'lum foydalanuvchi* taklif qildi_", true, null);
         }
+        showMain();
     }
     setUser();
-    showMain();
 }
 
 function showMain(){

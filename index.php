@@ -144,7 +144,7 @@ function showReferrals(){
     } else {
         $yourReferrals = "👥 Sizning taklif qilgan Referallaringiz: $referrals ta";
     }
-    $text = "$yourReferrals \n\n🔗 Sizning Referal ssilka: \nhttp://t.me/uzcoinphpbot?start=$chatID \n➖➖➖➖➖➖➖➖➖➖ \n\n❗️Ushbu ssilkani do'stlaringizga tarqating Agar ular shu ssilkani bosib botga kirsa va kanalga a'zo bo'lsa sizga Referral qo'shiladi";
+    $text = "$yourReferrals \n\n🔗 Sizning Referal ssilka: \nhttp://t.me/Uzcoin_Referral_bot?start=$chatID \n➖➖➖➖➖➖➖➖➖➖ \n\n❗️Ushbu ssilkani do'stlaringizga tarqating Agar ular shu ssilkani bosib botga kirsa va kanalga a'zo bo'lsa sizga Referral qo'shiladi";
     sendMessage($text);
 }
 

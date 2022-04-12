@@ -1,13 +1,13 @@
 <?php
     class Database{
-        private $hostname = 'mysql-72898-0.cloudclusters.net';// mysql-72898-0.cloudclusters.net
-        private $username = 'admin'; // admin
-        private $password = 'gmBTydEM'; // gmBTydEM
-        private $database = 'referral_bot'; // referral_bot
-        private $port = 19546;
+        private $hostname = 'localhost';// mysql-72898-0.cloudclusters.net
+        private $username = 'b90622t9_db';
+        private $password = '9eKEGr&L';
+        private $database = 'b90622t9_db';
+        // private $port = 19546;
         
         private function connect(){
-            $mysqli = new mysqli($this->hostname, $this->username, $this->password, $this->database, $this->port);
+            $mysqli = new mysqli($this->hostname, $this->username, $this->password, $this->database);
             
             if ($mysqli->connect_error) {
                 die('Connect Error (' . $mysqli->connect_errno . ')  '. $mysqli->connect_error);
@@ -65,6 +65,6 @@
             $query = mysqli_query($this->connect(), "UPDATE `users` SET `balance` = $balance WHERE tg_id = $chatID");
         }
     }
-    // $db = new Database;
-    // var_dump(json_encode($db->botStatistics(), JSON_PRETTY_PRINT));
+    $db = new Database;
+    var_dump(json_encode($db->botStatistics(), JSON_PRETTY_PRINT));
 ?>

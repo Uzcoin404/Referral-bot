@@ -66,5 +66,6 @@
         }
     }
     $db = new Database;
-    var_dump(json_encode($db->botStatistics(), JSON_PRETTY_PRINT));
+    echo "connected";
+    // var_dump(json_encode($db->botStatistics(), JSON_PRETTY_PRINT));
 ?>

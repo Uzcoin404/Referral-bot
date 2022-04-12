@@ -4,10 +4,10 @@
         private $username = 'b90622t9_db';
         private $password = '9eKEGr&L';
         private $database = 'b90622t9_db';
-        // private $port = 19546;
+        private $port = 3306;
         
         private function connect(){
-            $mysqli = new mysqli($this->hostname, $this->username, $this->password, $this->database);
+            $mysqli = new mysqli($this->hostname, $this->username, $this->password, $this->database, $this->port);
             
             if ($mysqli->connect_error) {
                 die('Connect Error (' . $mysqli->connect_errno . ')  '. $mysqli->connect_error);

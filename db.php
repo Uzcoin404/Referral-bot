@@ -1,9 +1,9 @@
 <?php
     class Database{
-        private $hostname = 'localhost';// mysql-72898-0.cloudclusters.net
-        private $username = 'b90622t9_db';
-        private $password = '9eKEGr&L';
-        private $database = 'b90622t9_db';
+        private $hostname = 'remotemysql.com';
+        private $username = 'E8ryNWgSlb';
+        private $password = 'aJjQAJqCtw&L';
+        private $database = 'E8ryNWgSlb';
         private $port = 3306;
         
         private function connect(){
